@@ -1,6 +1,20 @@
 # circle
 
-A new Flutter project.
+
+- Login with email and password, password reset also there.
+- Sign-in
+- Homepage with list of groups
+- Admin Page
+- Requesting Page
+- Group Create Page
+- About Group 
+- Group Page
+- Blog Posts
+- Upvoting Comments
+- Group Chat
+- Lottie Animations 
+
+New chat will appear on top no more distraction and reply them.
 
 ## Getting Started
 
