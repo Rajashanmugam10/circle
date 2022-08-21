@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:lottie/lottie.dart';
 
 class Raja extends StatefulWidget {
   const Raja({Key? key}) : super(key: key);
@@ -35,11 +36,7 @@ class _RajaState extends State<Raja> {
                       child: CircularProgressIndicator(),
                     );
                   }
-                  if (snapshot.data == null) {
-                    return const Center(
-                      child: Text('no request'),
-                    );
-                  }
+
                   if (snapshot.hasData) {
                     Map<String, dynamic> data =
                         snapshot.data!.data() as Map<String, dynamic>;

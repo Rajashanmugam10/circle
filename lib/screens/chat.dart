@@ -9,6 +9,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 
 import 'package:image_picker/image_picker.dart';
 import 'package:intl/intl.dart';
+import 'package:lottie/lottie.dart';
 import 'package:swipe_to/swipe_to.dart';
 import 'package:uuid/uuid.dart';
 
@@ -84,21 +85,29 @@ class _ChatState extends State<Chat> {
                     child: CircularProgressIndicator(),
                   );
                 }
-                if (!snapshot.hasData) {
-                  return const Center(
-                    child: Text(
-                      'no data',
-                      style: TextStyle(color: Colors.white),
-                    ),
+                if (!snapshot.hasData || snapshot.data!.docs.isEmpty) {
+                  return Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Lottie.asset('assets/chatting.json'),
+                      const Text(
+                        'new chat always on top',
+                      ),
+                      const Text(
+                        'swipe to reply',
+                      ),
+                      const Text('tap the message to see replies')
+                    ],
                   );
                 }
+
                 if (snapshot.hasData) {
                   final data = snapshot.requireData;
                   print(FirebaseAuth.instance.currentUser!.uid);
 
                   return ListView.separated(
                       separatorBuilder: ((context, index) => const SizedBox(
-                            height: 20,
+                            height: 15,
                           )),
                       itemCount: snapshot.data!.docs.length,
                       itemBuilder: (context, index) {

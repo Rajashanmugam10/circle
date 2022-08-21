@@ -58,8 +58,10 @@ class AuthMethods {
           'photourl': photourl,
           'admin': [],
           'request': [],
+          'saved': [],
           'password': password,
           'group': [],
+          'friends request': [],
         });
 
         res = "Success";

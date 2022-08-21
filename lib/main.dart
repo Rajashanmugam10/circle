@@ -1,5 +1,7 @@
 import 'package:circle/screens/homepage.dart';
 import 'package:circle/screens/login.dart';
+import 'package:circle/screens/navigator.dart';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -17,13 +19,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // theme: ThemeData(),
-      // .copyWith(
-      //     accentColor: Colors.blue,
-      //     cardTheme: const CardTheme(
-      //       shadowColor: Color.fromARGB(255, 4, 156, 232),
-      //     ),
-      //     appBarTheme: const AppBarTheme(backgroundColor: Colors.blue)),
       debugShowCheckedModeBanner: false,
       darkTheme: ThemeData.dark(),
       themeMode: ThemeMode.system,

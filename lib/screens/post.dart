@@ -43,8 +43,8 @@ class _PostState extends State<Post> {
       String res = await FirestoreMethods().uploadpost(
         _decprtioncontroller.text,
         _file!,
-        _blog.text,
         snapshot.get('uid').toString(),
+        _blog.text,
         snapshot.get('username').toString(),
         snapshot.get('photourl').toString(),
         widget.grpname,
